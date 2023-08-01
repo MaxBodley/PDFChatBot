@@ -368,6 +368,35 @@ def csv_processing(pdf_docs):
         # Display total cost
         st.write("Total Cost: ${:.2f}".format(st.session_state.callbacks))
 
+def average_chunk_length(list_of_chunks):
+    total_length = sum(len(sublist.page_content) for sublist in list_of_chunks)
+    num_sublists = len(list_of_chunks)
+    if num_sublists == 0:
+        return 0  # Avoid division by zero for an empty list of lists
+    average_length = total_length / num_sublists
+    return average_length
+
+def cost_calculator(average_length, query_dict, docs_list):
+    chunks_per_query = 4
+    num_chars = average_length * len(query_dict) * chunks_per_query * len(docs_list)
+    num_tokens = num_chars//5
+    total_cost = num_tokens/1000*0.02
+    return total_cost
+
+def csv_cost_estimator(pdf_docs):
+    if st.button("Estimate Cost", use_container_width=True):
+        if len(pdf_docs) == 0:
+            st.error("Please upload PDF documents")
+            return
+        
+        with st.spinner("Estimating"):
+            text_obj, doc_names = get_pdf_text(pdf_docs)
+            text_chunks, metadata = get_text_chunks(text_obj)
+            avg_length = average_chunk_length(text_chunks)
+            cost_est = cost_calculator(avg_length, query_dict, pdf_docs)
+
+        st.write("Estimated Cost: ${:.2f}".format(cost_est))
+
 def main():
     # Initialization and Loading
     load_dotenv()
@@ -408,6 +437,7 @@ def main():
         if selected == "PDF Chat":
             chat_processing(pdf_docs)
         elif selected == "PDF to CSV":
+            csv_cost_estimator(pdf_docs)
             csv_processing(pdf_docs)
 
     # Main content based on the sidebar selection
