@@ -17,7 +17,7 @@
   <p align="center">
     An awesome way to interact with you PDF documents!
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://multiple-pdf-chat.streamlit.app/"><strong>Try yourself! »</strong></a>
     <br />
     <br />
     <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
