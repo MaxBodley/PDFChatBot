@@ -26,9 +26,9 @@
 
 ## About The Project
 
-![Screenshot](Images/Screenshot%202023-08-20%20155433.png)
+<img alt="Recording" src="Images/Recording%202023-08-20%20at%2016.45.57.gif">
 
-This PDF chat bot provides a simple and powerful way to chat with a group of PDF documents. Designed using Langchain, not only will this project allow you to chat with multiple PDFS, but will also return relevant source documentation for each query.
+This PDF chat bot provides a simple and powerful way to chat with a group of PDF documents. Leveraging OpenAI, FAISS, and Langchain, not only will this project allow you to chat with multiple PDFS, but will also return relevant source documentation for each query. Upon chatting with your PDFs, you then have the option to download your chat history for future viewing!
 
 Furthermore, this project also has the capabilities to define a list of queries you want answered for a given set of PDF documents. Using the PDF to CSV function, you can then have the answers to these questions returned as a CSV file - with the document names as row indices and the individual queries as column indices.
 
