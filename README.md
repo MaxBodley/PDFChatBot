@@ -20,8 +20,6 @@
     <a href="https://multiple-pdf-chat.streamlit.app/"><strong>Try yourself! »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
-    ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Report Bug</a>
     ·
     <a href="https://github.com/othneildrew/Best-README-Template/issues">Request Feature</a>
@@ -63,20 +61,9 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+This PDF chat bot provides a simple and powerful way to chat with a group of PDF documents. Designed using Langchain, not only will this project allow you to chat with multiple PDFS, but will also return relevant source documentation for each query.
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
-
-Use the `BLANK_README.md` to get started.
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
+Furthermore, this project also has the capabilities to define a list of queries you want answered for a given set of PDF documents. Using the PDF to CSV function, you can then have the answers to these questions returned as a CSV file - with the document names as row indices and the individual queries as column indices.
 
 ### Built With
 
